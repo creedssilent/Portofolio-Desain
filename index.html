@@ -6,345 +6,159 @@
     <title>Portofolio | MHD. Elvisrafi Syawal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        /* Navbar Styling - Glassmorphism */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            z-index: 1000;
-            padding: 15px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #00d2ff;
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-
-        nav a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #00d2ff;
-        }
-
-        /* Section Global Layout */
-        section {
-            min-height: 100vh;
-            padding: 100px 10%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-align: center;
-            color: #00d2ff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Hero / Home Section */
-        #home {
-            align-items: flex-start;
-            text-align: left;
-        }
-
-        #home h1 {
-            font-size: 3.5rem;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        #home h1 span {
-            color: #00d2ff;
-        }
-
-        #home p {
-            font-size: 1.2rem;
-            color: #b0bec5;
-            max-width: 650px;
-            margin-bottom: 30px;
-        }
-
-        .btn-custom {
-            padding: 12px 30px;
-            background: linear-gradient(45deg, #00d2ff, #3a7bd5);
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: inline-block;
-        }
-
-        .btn-custom:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
-        }
-
-        /* About Section */
-        #about {
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        .about-content {
-            display: flex;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-text {
-            flex: 1;
-            font-size: 1.05rem;
-            color: #cfd8dc;
-        }
-
-        .skills-container {
-            flex: 1;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            align-content: flex-start;
-        }
-
-        .skill-tag {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 8px 18px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 0.9rem;
-        }
-
-        /* Portfolio Section */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .portfolio-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 25px;
-            transition: transform 0.3s;
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .portfolio-card h3 {
-            color: #00d2ff;
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-        
-        .portfolio-card h4 {
-            color: #90caf9;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        .portfolio-card p {
-            font-size: 0.95rem;
-            color: #b0bec5;
-        }
-
-        /* Certificate Section */
-        #certificate {
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        .cert-info {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .cert-info h3 {
-            color: #00d2ff;
-            font-size: 1.5rem;
-        }
-
-        .cert-info p {
-            color: #b0bec5;
-            font-size: 1rem;
-        }
-
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            justify-items: center;
-        }
-
-        .cert-img {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid rgba(0, 210, 255, 0.3);
-            transition: transform 0.3s;
-        }
-
-        .cert-img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Contact Section */
-        .contact-container {
-            text-align: center;
-        }
-
-        .contact-details {
-            margin-top: 20px;
-            color: #cfd8dc;
-            font-size: 1.1rem;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .contact-links a {
-            color: white;
-            font-size: 2rem;
-            transition: color 0.3s;
-        }
-
-        .contact-links a:hover {
-            color: #00d2ff;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #0b1317;
-            font-size: 0.9rem;
-            color: #78909c;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <a href="#home" class="logo">ELVIS.</a>
+        <a href="#home" class="logo">Rafi.</a>
         <nav>
             <ul>
-                <li><a href="#about">About Myself</a></li>
-                <li><a href="#portfolio">My Portofolio</a></li>
-                <li><a href="#certificate">Certificate</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#certificate">Certificate & Docs</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="home">
         <h1>Hi, I'm <br><span>MHD. Elvisrafi Syawal</span></h1>
-        <p>Lulusan S1 Teknik Informatika yang ahli dalam manajemen data akademik, pengembangan aplikasi web (PHP & MySQL), serta operasional administrasi digital dengan tingkat ketelitian tinggi.</p>
-        <a href="#portfolio" class="btn-custom">Lihat Portofolio & Pengalaman</a>
+        <p>Lulusan Teknik Informatika yang ahli dalam manajemen data akademik, pengembangan aplikasi web (PHP & MySQL), serta operasional administrasi digital dengan tingkat ketelitian tinggi.</p>
+        <div class="action-buttons-home">
+            <a href="#experience" class="btn-custom">Lihat Pengalaman</a>
+            <a href="cv-ats.pdf" target="_blank" class="btn-outline"><i class="fas fa-download"></i> Download CV</a>
+        </div>
     </section>
 
     <section id="about">
-        <h2 class="section-title">About Myself</h2>
+        <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <div class="about-text">
-                <p>Saya adalah lulusan S1 Teknik Informatika dari <strong>Institut Bisnis dan Teknologi Pelita Indonesia</strong> (Penerima Beasiswa Penuh KIP-Kuliah) dengan IPK 3.78/4.00. Selama masa studi, saya juga aktif berorganisasi di Badan Eksekutif Mahasiswa (BEM-PI) dan Lembaga Dakwah Kampus (LDK-PI).</p>
-                <br>
-                <p>Saya memiliki pengalaman kerja selama 2 tahun sebagai staf administrasi di BAAK. Saya terbiasa dengan manajemen data akademik massal, verifikasi berkas digital, operasional Sistem Informasi Akademik (SIA), dan bekerja secara sistematis untuk memenuhi standar operasional yang ketat.</p>
+            <div class="about-image-wrapper">
+                <img src="foto-profil.jpg" alt="MHD. Elvisrafi Syawal" class="profile-img">
             </div>
+            
+            <div class="about-text">
+                <p>Saya berlatar belakang Teknik Informatika dari <strong>Institut Bisnis dan Teknologi Pelita Indonesia</strong> (Penerima Beasiswa Penuh KIP-Kuliah) dengan IPK 3.78/4.00.</p>
+                <p>Saya memiliki minat besar pada bidang administrasi data dan pengembangan web. Fokus saya adalah menggabungkan kemampuan analisis sistematis dengan keahlian teknis untuk memastikan integritas data dan efisiensi operasional suatu instansi.</p>
+                
+                <h3 class="sub-heading-about">Education</h3>
+                <p><strong>Institut Bisnis dan Teknologi Pelita Indonesia</strong><br>
+                Teknik Informatika | Sep 2021 - Jul 2025</p>
+                
+                <h3 class="sub-heading-about">Organization Experience</h3>
+                <ul class="org-list">
+                    <li><strong>Badan Eksekutif Mahasiswa (BEM-PI)</strong> (Agu 2021 - Agu 2023)<br>Mengelola dokumentasi, koordinasi acara, dan manajemen organisasi.</li>
+                    <li><strong>Lembaga Dakwah Kampus (LDK-PI)</strong> (Agu 2021 - Agu 2023)<br>Perencanaan program kerja dan pengembangan karakter mahasiswa.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="skills-section">
+            <h3 class="sub-heading-about" style="text-align: center; margin-bottom: 20px;">Technical & Administrative Skills</h3>
             <div class="skills-container">
-                <div class="skill-tag">Operasional SIA</div>
+                <div class="skill-tag">Operasional Sistem Informasi Akademik (SIA)</div>
+                <div class="skill-tag">Validasi & Penginputan Data</div>
+                <div class="skill-tag">Verifikasi & Integritas Data</div>
+                <div class="skill-tag">Administrasi Perkantoran</div>
+                <div class="skill-tag">Mengarsip Dokumen</div>
                 <div class="skill-tag">PHP & MySQL</div>
-                <div class="skill-tag">Audit Data & Verifikasi</div>
-                <div class="skill-tag">Microsoft Excel</div>
-                <div class="skill-tag">Database & SQL</div>
-                <div class="skill-tag">Detail-Oriented</div>
-                <div class="skill-tag">Pengoperasian Sistem POS</div>
+                <div class="skill-tag">Aplikasi Microsoft Office</div>
+                <div class="skill-tag">Microsoft Excel (Mass Data)</div>
+                <div class="skill-tag">Pelayanan Publik</div>
             </div>
         </div>
     </section>
 
-    <section id="portfolio">
-        <h2 class="section-title">Experience & Projects</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <h3>Staff BAAK</h3>
-                <h4>IBT Pelita Indonesia | Des 2023 - Des 2025</h4>
-                <p>Mendukung operasional harian Sistem Informasi Akademik (SIA), melakukan verifikasi audit berkas digital pendaftaran Sempro/Skripsi, serta mengelola proses finalisasi dokumen ijazah dan transkrip nilai secara akurat.</p>
+    <section id="experience">
+        <h2 class="section-title">Work Experience</h2>
+        
+        <div class="detailed-row">
+            <div class="detailed-image">
+                <img src="kerja-baak.jpg" alt="Dokumentasi Kerja BAAK">
             </div>
-            <div class="portfolio-card">
-                <h3>Aplikasi Administrasi Sekolah Berbasis Web</h3>
-                <h4>SMKN 2 Bengkalis | Jan 2025 - Apr 2025</h4>
-                <p>Membangun sistem digital administrasi sekolah menggunakan PHP dan MySQL. Proyek ini berhasil mengautomasi proses administrasi pendataan siswa dan pembuatan laporan akademik.</p>
+            <div class="detailed-text">
+                <h3>Staff Biro Administrasi Akademik dan Kemahasiswaan (BAAK)</h3>
+                <h4>Institut Bisnis dan Teknologi Pelita Indonesia | Des 2023 - Des 2025</h4>
+                <p>Mendukung operasional harian Sistem Informasi Akademik (SIA), termasuk konfigurasi jadwal kuliah dan pembaruan data mahasiswa baru. Pekerjaan ini menuntut tingkat ketelitian yang sangat tinggi dalam mengelola data akademik.</p>
+                <ul>
+                    <li>Melakukan verifikasi audit ketelitian berkas digital pendaftaran Sempro/Skripsi serta pembaruan status sistem.</li>
+                    <li>Mengelola proses finalisasi dokumen ijazah dan transkrip nilai untuk 2 periode wisuda secara akurat.</li>
+                    <li>Menerbitkan dokumen akademik resmi berdasarkan verifikasi pembayaran keuangan mahasiswa di sistem.</li>
+                </ul>
+                <a href="#surat-kerja" class="btn-outline" style="margin-top: 15px; font-size: 0.85rem; padding: 8px 20px;"><i class="fas fa-file-alt"></i> Lihat Surat Keterangan Kerja</a>
             </div>
-            <div class="portfolio-card">
+        </div>
+
+        <div class="detailed-row">
+            <div class="detailed-image">
+                <img src="kerja-kantin.jpg" alt="Kasir Kantin Kampus">
+            </div>
+            <div class="detailed-text">
                 <h3>Kasir & Staf Pengelola Stok</h3>
                 <h4>Kantin Kampus | Feb 2022 - Apr 2023</h4>
-                <p>Mengoperasikan sistem kasir (POS) menggunakan scanner barcode untuk efisiensi transaksi harian, serta mengelola manajemen stok barang masuk/keluar pada sistem inventaris.</p>
+                <p>Bertanggung jawab penuh atas kelancaran transaksi harian dan manajemen ketersediaan barang secara akurat.</p>
+                <ul>
+                    <li>Mengoperasikan sistem kasir (POS) menggunakan scanner barcode untuk efisiensi waktu pelayanan.</li>
+                    <li>Mengelola manajemen stok barang masuk/keluar pada sistem inventaris dasar dan memastikan akurasi laporan kas harian.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="project">
+        <h2 class="section-title">Project Highlights</h2>
+        
+        <div class="detailed-row">
+            <div class="detailed-image">
+                <img src="proyek-sekolah.png" alt="Screenshot Aplikasi Administrasi SMKN 2">
+            </div>
+            <div class="detailed-text">
+                <h3>Aplikasi Administrasi Sekolah SMKN 2 Bengkalis</h3>
+                <h4>Berbasis WEB | Jan 2025 - Apr 2025</h4>
+                <p>Merancang dan membangun sistem digital administrasi sekolah untuk mendigitalisasi proses pendataan siswa yang sebelumnya manual menjadi terpusat pada satu basis data.</p>
+                <p>Proyek ini mencakup analisis kebutuhan sistem sekolah, perancangan database relasional, hingga peluncuran aplikasi yang dapat menghasilkan laporan akademik secara instan.</p>
+                <p><strong>Role:</strong> Full-Stack Developer, System Analyst.</p>
+                <p><strong>Skills:</strong> Web Development, PHP, MySQL, Database Design.</p>
             </div>
         </div>
     </section>
 
     <section id="certificate">
-        <h2 class="section-title">Certificate</h2>
+        <h2 class="section-title">Certificates & Documents</h2>
         
-        <div class="cert-info">
-            <h3>Sertifikat Kompetensi Kerja (BNSP) – Software Engineer</h3>
-            <p><strong>Periode Validasi:</strong> Juni 2024 - Juni 2027 <br> Keahlian Software Development - Software Development Expertise</p>
+        <div class="detailed-row">
+            <div class="detailed-image">
+                <img src="sertifikat-bnsp.jpg" alt="Sertifikat BNSP Software Engineer">
+            </div>
+            <div class="detailed-text">
+                <h3>Sertifikat Kompetensi Kerja (BNSP)</h3>
+                <h4>Software Engineer | Juni 2024 - Juni 2027</h4>
+                <p>Sertifikasi kompetensi resmi berskala nasional dari Badan Nasional Sertifikasi Profesi (BNSP) yang memvalidasi kualifikasi dalam bidang <em>Software Development Expertise</em>.</p>
+            </div>
         </div>
 
-        <div class="cert-grid">
-            <img src="https://via.placeholder.com/800x600/1a2935/00d2ff?text=Sertifikat+BNSP+Software+Engineer" alt="Sertifikat BNSP" class="cert-img">
+        <div class="detailed-row">
+            <div class="detailed-image">
+                <img src="sertifikat-senatika.jpg" alt="Sertifikat SENATIKA Pemakalah Terbaik">
+            </div>
+            <div class="detailed-text">
+                <h3>Pemakalah Terbaik - SENATIKA 5</h3>
+                <h4>Seminar Nasional Informatika 5 | Oktober 2025</h4>
+                <p>Penghargaan sebagai Pemakalah Terbaik pada kegiatan Seminar Nasional Informatika dengan tema "Era Quantum - Metamorfosis AI Indonesia" yang diselenggarakan oleh IBT Pelita Indonesia.</p>
+            </div>
+        </div>
+
+        <div class="detailed-row" id="surat-kerja">
+            <div class="detailed-image">
+                <img src="surat-pengalaman-kerja.jpg" alt="Surat Pengalaman Kerja BAAK">
+            </div>
+            <div class="detailed-text">
+                <h3>Surat Keterangan Pengalaman Kerja (Paklaring)</h3>
+                <h4>Staff BAAK IBT Pelita Indonesia</h4>
+                <p>Dokumen resmi yang memvalidasi pengalaman kerja profesional selama 2 tahun (Desember 2023 - Desember 2025) dengan predikat kinerja yang baik dan kemampuan bekerja sama dalam tim.</p>
+            </div>
         </div>
     </section>
 
