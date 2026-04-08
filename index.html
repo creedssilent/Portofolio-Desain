@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Elvis</title>
+    <title>Portofolio | MHD. Elvisrafi Syawal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -92,7 +92,7 @@
         }
 
         #home h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             line-height: 1.2;
             margin-bottom: 20px;
         }
@@ -104,7 +104,7 @@
         #home p {
             font-size: 1.2rem;
             color: #b0bec5;
-            max-width: 600px;
+            max-width: 650px;
             margin-bottom: 30px;
         }
 
@@ -137,7 +137,7 @@
 
         .about-text {
             flex: 1;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: #cfd8dc;
         }
 
@@ -145,12 +145,13 @@
             flex: 1;
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 12px;
+            align-content: flex-start;
         }
 
         .skill-tag {
             background: rgba(255, 255, 255, 0.1);
-            padding: 8px 20px;
+            padding: 8px 18px;
             border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             font-size: 0.9rem;
@@ -178,7 +179,15 @@
 
         .portfolio-card h3 {
             color: #00d2ff;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .portfolio-card h4 {
+            color: #90caf9;
+            font-size: 0.9rem;
             margin-bottom: 15px;
+            font-style: italic;
         }
 
         .portfolio-card p {
@@ -191,15 +200,32 @@
             background: rgba(0, 0, 0, 0.2);
         }
 
+        .cert-info {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cert-info h3 {
+            color: #00d2ff;
+            font-size: 1.5rem;
+        }
+
+        .cert-info p {
+            color: #b0bec5;
+            font-size: 1rem;
+        }
+
         .cert-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
+            justify-items: center;
         }
 
         .cert-img {
             width: 100%;
-            height: 200px;
+            max-width: 500px;
+            height: auto;
             object-fit: cover;
             border-radius: 10px;
             border: 2px solid rgba(0, 210, 255, 0.3);
@@ -213,6 +239,12 @@
         /* Contact Section */
         .contact-container {
             text-align: center;
+        }
+
+        .contact-details {
+            margin-top: 20px;
+            color: #cfd8dc;
+            font-size: 1.1rem;
         }
 
         .contact-links {
@@ -257,72 +289,86 @@
     </header>
 
     <section id="home">
-        <h1>Hi, I'm <br><span>Elvis</span></h1>
-        <p>Saya merancang dan membangun solusi digital yang efisien, mulai dari pengembangan web hingga desain visual yang menarik.</p>
-        <a href="#portfolio" class="btn-custom">Lihat Karya Saya</a>
+        <h1>Hi, I'm <br><span>MHD. Elvisrafi Syawal</span></h1>
+        <p>Lulusan S1 Teknik Informatika yang ahli dalam manajemen data akademik, pengembangan aplikasi web (PHP & MySQL), serta operasional administrasi digital dengan tingkat ketelitian tinggi.</p>
+        <a href="#portfolio" class="btn-custom">Lihat Portofolio & Pengalaman</a>
     </section>
 
     <section id="about">
         <h2 class="section-title">About Myself</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Saya adalah seorang profesional di bidang Informatika yang memiliki ketertarikan mendalam pada pengembangan sistem dan desain media. Saya terbiasa menganalisis masalah dan menuangkannya ke dalam kode yang bersih maupun aset visual yang komunikatif.</p>
+                <p>Saya adalah lulusan S1 Teknik Informatika dari <strong>Institut Bisnis dan Teknologi Pelita Indonesia</strong> (Penerima Beasiswa Penuh KIP-Kuliah) dengan IPK 3.78/4.00. Selama masa studi, saya juga aktif berorganisasi di Badan Eksekutif Mahasiswa (BEM-PI) dan Lembaga Dakwah Kampus (LDK-PI).</p>
                 <br>
-                <p>Ketika tidak sedang ngoding, saya biasanya menghabiskan waktu bermain game MMORPG atau merancang grafis kreatif.</p>
+                <p>Saya memiliki pengalaman kerja selama 2 tahun sebagai staf administrasi di BAAK. Saya terbiasa dengan manajemen data akademik massal, verifikasi berkas digital, operasional Sistem Informasi Akademik (SIA), dan bekerja secara sistematis untuk memenuhi standar operasional yang ketat.</p>
             </div>
             <div class="skills-container">
-                <div class="skill-tag">Web Development</div>
+                <div class="skill-tag">Operasional SIA</div>
                 <div class="skill-tag">PHP & MySQL</div>
-                <div class="skill-tag">System Administration</div>
-                <div class="skill-tag">Adobe Photoshop</div>
-                <div class="skill-tag">Problem Solving</div>
+                <div class="skill-tag">Audit Data & Verifikasi</div>
+                <div class="skill-tag">Microsoft Excel</div>
+                <div class="skill-tag">Database & SQL</div>
+                <div class="skill-tag">Detail-Oriented</div>
+                <div class="skill-tag">Pengoperasian Sistem POS</div>
             </div>
         </div>
     </section>
 
     <section id="portfolio">
-        <h2 class="section-title">My Portofolio</h2>
+        <h2 class="section-title">Experience & Projects</h2>
         <div class="portfolio-grid">
             <div class="portfolio-card">
-                <h3>Sistem Administrasi Berbasis Web</h3>
-                <p>Mendesain dan mengembangkan aplikasi administratif untuk SMKN 2 Bengkalis menggunakan arsitektur PHP dan database MySQL guna meningkatkan efisiensi pendataan.</p>
+                <h3>Staff BAAK</h3>
+                <h4>IBT Pelita Indonesia | Des 2023 - Des 2025</h4>
+                <p>Mendukung operasional harian Sistem Informasi Akademik (SIA), melakukan verifikasi audit berkas digital pendaftaran Sempro/Skripsi, serta mengelola proses finalisasi dokumen ijazah dan transkrip nilai secara akurat.</p>
             </div>
             <div class="portfolio-card">
-                <h3>Media Design & Branding</h3>
-                <p>Membuat berbagai aset visual organisasi dan materi branding dengan menggunakan Adobe Photoshop, memastikan identitas visual yang konsisten dan menarik.</p>
+                <h3>Aplikasi Administrasi Sekolah Berbasis Web</h3>
+                <h4>SMKN 2 Bengkalis | Jan 2025 - Apr 2025</h4>
+                <p>Membangun sistem digital administrasi sekolah menggunakan PHP dan MySQL. Proyek ini berhasil mengautomasi proses administrasi pendataan siswa dan pembuatan laporan akademik.</p>
             </div>
             <div class="portfolio-card">
-                <h3>Automation Scripts</h3>
-                <p>Eksplorasi dan pembuatan skrip otomatisasi menggunakan AutoHotkey (AHK) untuk menyederhanakan tugas-tugas repetitif pada sistem operasi.</p>
+                <h3>Kasir & Staf Pengelola Stok</h3>
+                <h4>Kantin Kampus | Feb 2022 - Apr 2023</h4>
+                <p>Mengoperasikan sistem kasir (POS) menggunakan scanner barcode untuk efisiensi transaksi harian, serta mengelola manajemen stok barang masuk/keluar pada sistem inventaris.</p>
             </div>
         </div>
     </section>
 
     <section id="certificate">
-        <h2 class="section-title">Certificates</h2>
-        <p style="text-align: center; color: #b0bec5; margin-bottom: 30px;">Berikut adalah beberapa sertifikasi dan penghargaan yang telah saya raih.</p>
+        <h2 class="section-title">Certificate</h2>
+        
+        <div class="cert-info">
+            <h3>Sertifikat Kompetensi Kerja (BNSP) – Software Engineer</h3>
+            <p><strong>Periode Validasi:</strong> Juni 2024 - Juni 2027 <br> Keahlian Software Development - Software Development Expertise</p>
+        </div>
+
         <div class="cert-grid">
-            <img src="https://via.placeholder.com/400x300/1a2935/00d2ff?text=Sertifikat+1" alt="Sertifikat 1" class="cert-img">
-            <img src="https://via.placeholder.com/400x300/1a2935/00d2ff?text=Sertifikat+2" alt="Sertifikat 2" class="cert-img">
-            <img src="https://via.placeholder.com/400x300/1a2935/00d2ff?text=Sertifikat+3" alt="Sertifikat 3" class="cert-img">
+            <img src="https://via.placeholder.com/800x600/1a2935/00d2ff?text=Sertifikat+BNSP+Software+Engineer" alt="Sertifikat BNSP" class="cert-img">
         </div>
     </section>
 
     <section id="contact">
         <h2 class="section-title">Contact Me</h2>
         <div class="contact-container">
-            <p style="font-size: 1.2rem; color: #cfd8dc; max-width: 600px; margin: 0 auto;">Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya melalui platform di bawah ini.</p>
+            <p style="font-size: 1.2rem; color: #cfd8dc; max-width: 600px; margin: 0 auto;">Pekanbaru, Indonesia</p>
+            
+            <div class="contact-details">
+                <p><i class="fas fa-envelope" style="color:#00d2ff;"></i> elvisrafisyawal.01@gmail.com</p>
+                <p><i class="fas fa-phone" style="color:#00d2ff;"></i> 0823-2166-6336</p>
+            </div>
+
             <div class="contact-links">
-                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:emailmu@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://linkedin.com/in/mhd-elvisrafi-syawal" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/creedssilent" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:elvisrafisyawal.01@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/6282321666336" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Elvis. Built for GitHub Pages.</p>
+        <p>&copy; 2026 MHD. Elvisrafi Syawal. Built for GitHub Pages.</p>
     </footer>
 
 </body>
