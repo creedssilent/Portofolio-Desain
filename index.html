@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Elvis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Navbar Styling - Glassmorphism */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00d2ff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d2ff;
+        }
+
+        /* Section Global Layout */
+        section {
+            min-height: 100vh;
+            padding: 100px 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #00d2ff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Hero / Home Section */
+        #home {
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        #home h1 {
+            font-size: 4rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        #home h1 span {
+            color: #00d2ff;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            color: #b0bec5;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .btn-custom {
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
+        }
+
+        /* About Section */
+        #about {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .about-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            font-size: 1.1rem;
+            color: #cfd8dc;
+        }
+
+        .skills-container {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .portfolio-card h3 {
+            color: #00d2ff;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-card p {
+            font-size: 0.95rem;
+            color: #b0bec5;
+        }
+
+        /* Certificate Section */
+        #certificate {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .cert-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 210, 255, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .cert-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-links a {
+            color: white;
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: #00d2ff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0b1317;
+            font-size: 0.9rem;
+            color: #78909c;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#home" class="logo">ELVIS.</a>
+        <nav>
+            <ul>
+                <li><a href="#about">About Myself</a></li>
+                <li><a href="#portfolio">My Portofolio</a></li>
+                <li><a href="#certificate">Certificate</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Hi, I'm <br><span>Elvis</span></h1>
+        <p>Saya merancang dan membangun solusi digital yang efisien, mulai dari pengembangan web hingga desain visual yang menarik.</p>
+        <a href="#portfolio" class="btn-custom">Lihat Karya Saya</a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Myself</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Saya adalah seorang profesional di bidang Informatika yang memiliki ketertarikan mendalam pada pengembangan sistem dan desain media. Saya terbiasa menganalisis masalah dan menuangkannya ke dalam kode yang bersih maupun aset visual yang komunikatif.</p>
+                <br>
+                <p>Ketika tidak sedang ngoding, saya biasanya menghabiskan waktu bermain game MMORPG atau merancang grafis kreatif.</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-tag">Web Development</div>
+                <div class="skill-tag">PHP & MySQL</div>
+                <div class="skill-tag">System Administration</div>
+                <div class="skill-tag">Adobe Photoshop</div>
+                <div class="skill-tag">Problem Solving</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2 class="section-title">My Portofolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <h3>Sistem Administrasi Berbasis Web</h3>
+                <p>Mendesain dan mengembangkan aplikasi administratif untuk SMKN 2 Bengkalis menggunakan arsitektur PHP dan database MySQL guna meningkatkan efisiensi pendataan.</p>
+            </div>
+            <div class="portfolio-card">
+                <h3>Media Design & Branding</h3>
+                <p>Membuat berbagai aset visual organisasi dan materi branding dengan menggunakan Adobe Photoshop, memastikan identitas visual yang konsisten dan menarik.</p>
+            </div>
+            <div class="portfolio-card">
+                <h3>Automation Scripts</h3>
+                <p>Eksplorasi dan pembuatan skrip otomatisasi menggunakan AutoHotkey (AHK) untuk menyederhanakan tugas-tugas repetitif pada sistem operasi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificate">
+        <h2 class="section-title">Certificates</h2>
+        <p style="text-align: center; color: #b0bec5; margin-bottom: 30px;">Berikut adalah beberapa sertifikasi dan penghargaan yang telah saya raih.</p>
+        <div class="cert-grid">
+            <img src="https://via.placeholder.com/400x300/1a2935/00d2ff?text=Sertifikat+1" alt="Sertifikat 1" class="cert-img">
+            <img src="https://via.placeholder.com/400x300/1a2935/00d2ff?text=Sertifikat+2" alt="Sertifikat 2" class="cert-img">
+            <img src="https://via.placeholder.com/400x300/1a2935/00d2ff?text=Sertifikat+3" alt="Sertifikat 3" class="cert-img">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-container">
+            <p style="font-size: 1.2rem; color: #cfd8dc; max-width: 600px; margin: 0 auto;">Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya melalui platform di bawah ini.</p>
+            <div class="contact-links">
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:emailmu@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Elvis. Built for GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
