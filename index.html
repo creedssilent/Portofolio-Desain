@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Tambahan untuk tombol bahasa */
+        .lang-btn {
+            background-color: #00d2ff;
+            color: #1a1a2e;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-left: 15px;
+            transition: 0.3s;
+        }
+        .lang-btn:hover {
+            background-color: #fff;
+        }
+        /* Secara default bahasa Inggris disembunyikan */
+        .lang-en { display: none; }
+    </style>
 </head>
 <body>
 
@@ -14,81 +33,98 @@
         <a href="#home" class="logo">Rafi.</a>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#certificate">Certificate & Docs</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about"><span class="lang-id">Tentang</span><span class="lang-en">About</span></a></li>
+                <li><a href="#experience"><span class="lang-id">Pengalaman</span><span class="lang-en">Experience</span></a></li>
+                <li><a href="#project"><span class="lang-id">Proyek</span><span class="lang-en">Project</span></a></li>
+                <li><a href="#certificate"><span class="lang-id">Sertifikat</span><span class="lang-en">Certificates</span></a></li>
+                <li><a href="#contact"><span class="lang-id">Kontak</span><span class="lang-en">Contact</span></a></li>
+                <li><button id="btnLanguage" class="lang-btn" onclick="toggleLanguage()">English 🇬🇧</button></li>
             </ul>
         </nav>
     </header>
 
     <section id="home">
-        <h1>Hi, I'm <br><span>MHD. Elvisrafi Syawal</span></h1>
-        <p>Lulusan Teknik Informatika yang ahli dalam manajemen data akademik, pengembangan aplikasi web (PHP & MySQL), serta operasional administrasi digital dengan tingkat ketelitian tinggi.</p>
+        <h1><span class="lang-id">Halo, Saya</span><span class="lang-en">Hi, I'm</span> <br><span>MHD. Elvisrafi Syawal</span></h1>
+        <p class="lang-id">Lulusan Teknik Informatika yang ahli dalam manajemen data akademik, pengembangan aplikasi web (PHP & MySQL), serta operasional administrasi digital dengan tingkat ketelitian tinggi.</p>
+        <p class="lang-en">Informatics Engineering graduate specializing in academic data management, web development (PHP & MySQL), and digital administrative operations with a high degree of meticulousness.</p>
         <div class="action-buttons-home">
-            <a href="#experience" class="btn-custom">Lihat Pengalaman</a>
+            <a href="#experience" class="btn-custom"><span class="lang-id">Lihat Pengalaman</span><span class="lang-en">View Experience</span></a>
         </div>
     </section>
 
     <section id="about">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title"><span class="lang-id">Tentang Saya</span><span class="lang-en">About Me</span></h2>
         <div class="about-content">
             <div class="about-image-wrapper">
                 <img src="foto-profil.JPG" alt="MHD. Elvisrafi Syawal" class="profile-img">
             </div>
             
             <div class="about-text">
-                <p>Saya berlatar belakang Teknik Informatika dari <strong>Institut Bisnis dan Teknologi Pelita Indonesia</strong> (Penerima Beasiswa Penuh KIP-Kuliah) dengan IPK 3.78/4.00.</p>
-                <p>Saya memiliki minat besar pada bidang administrasi data dan pengembangan web. Fokus saya adalah menggabungkan kemampuan analisis sistematis dengan keahlian teknis untuk memastikan integritas data dan efisiensi operasional suatu instansi.</p>
+                <p class="lang-id">Saya berlatar belakang Teknik Informatika dari <strong>Institut Bisnis dan Teknologi Pelita Indonesia</strong> (Penerima Beasiswa Penuh KIP-Kuliah) dengan IPK 3.78/4.00.</p>
+                <p class="lang-en">I hold a Bachelor's degree in Informatics Engineering from <strong>Institut Bisnis dan Teknologi Pelita Indonesia</strong> (Recipient of the National Full Scholarship) with a GPA of 3.78/4.00.</p>
                 
-                <h3 class="sub-heading-about">Education</h3>
+                <p class="lang-id">Saya memiliki minat besar pada bidang administrasi data dan pengembangan web. Fokus saya adalah menggabungkan kemampuan analisis sistematis dengan keahlian teknis untuk memastikan integritas data dan efisiensi operasional suatu instansi.</p>
+                <p class="lang-en">I have a strong interest in data administration and web development. My focus is on combining systematic analytical skills with technical expertise to ensure data integrity and operational efficiency.</p>
+                
+                <h3 class="sub-heading-about"><span class="lang-id">Pendidikan</span><span class="lang-en">Education</span></h3>
                 <p><strong>Institut Bisnis dan Teknologi Pelita Indonesia</strong><br>
-                Teknik Informatika | Sep 2021 - Jul 2025</p>
+                <span class="lang-id">Teknik Informatika | Sep 2021 - Jul 2025</span><span class="lang-en">Informatics Engineering | Sep 2021 - Jul 2025</span></p>
                 
-                <h3 class="sub-heading-about">Organization Experience</h3>
+                <h3 class="sub-heading-about"><span class="lang-id">Pengalaman Organisasi</span><span class="lang-en">Organization Experience</span></h3>
                 <ul class="org-list">
-                    <li><strong>Badan Eksekutif Mahasiswa (BEM-PI)</strong> (Agu 2021 - Agu 2023)<br>Bertanggung jawab sebagai teknisi operasional perangkat audio (sound system) dalam berbagai acara BEM. Memastikan instalasi kabel, pengaturan output suara, dan kelancaran teknis selama acara berlangsung guna mendukung kesuksesan agenda organisasi.</li>
-                    <li><strong>Lembaga Dakwah Kampus (LDK-PI)</strong> (Agu 2021 - Agu 2023)<br>Bertanggung jawab dalam desain grafis organisasi menggunakan Adobe Photoshop & Canva untuk mendukung publikasi kegiatan kampus. Dan teknisi operasional perangkat audio (sound system).</li>
+                    <li><strong><span class="lang-id">Badan Eksekutif Mahasiswa</span><span class="lang-en">Student Executive Board</span> (BEM-PI)</strong> (Agu 2021 - Agu 2023)<br>
+                    <span class="lang-id">Bertanggung jawab sebagai teknisi operasional perangkat audio (sound system) dalam berbagai acara BEM. Memastikan instalasi kabel, pengaturan output suara, dan kelancaran teknis selama acara berlangsung guna mendukung kesuksesan agenda organisasi.</span>
+                    <span class="lang-en">Served as the audio-visual technician for student board events. Responsible for sound system installation, output configuration, and ensuring seamless technical operations during major organizational agendas.</span></li>
+                    
+                    <li><strong>Lembaga Dakwah Kampus (LDK-PI)</strong> (Agu 2021 - Agu 2023)<br>
+                    <span class="lang-id">Bertanggung jawab dalam desain grafis organisasi menggunakan Adobe Photoshop & Canva untuk mendukung publikasi kegiatan kampus. Dan teknisi operasional perangkat audio (sound system).</span>
+                    <span class="lang-en">Responsible for organizational graphic design using Adobe Photoshop & Canva to support campus publication activities, alongside duties as an audio equipment technician.</span></li>
                 </ul>
             </div>
         </div>
 
         <div class="skills-section">
-            <h3 class="sub-heading-about" style="text-align: center; margin-bottom: 20px;">Technical & Administrative Skills</h3>
+            <h3 class="sub-heading-about" style="text-align: center; margin-bottom: 20px;"><span class="lang-id">Keahlian Teknis & Administrasi</span><span class="lang-en">Technical & Administrative Skills</span></h3>
             <div class="skills-container">
-                <div class="skill-tag">Operasional Sistem Informasi Akademik (SIA)</div>
-                <div class="skill-tag">Validasi & Penginputan Data</div>
-                <div class="skill-tag">Verifikasi & Integritas Data</div>
-                <div class="skill-tag">Administrasi Perkantoran</div>
-                <div class="skill-tag">IT Helpdesk & Troubleshooting Dasar</div>
-                <div class="skill-tag">Mengarsip Dokumen</div>
+                <div class="skill-tag"><span class="lang-id">Operasional Sistem Informasi Akademik</span><span class="lang-en">Academic Information Systems</span></div>
+                <div class="skill-tag"><span class="lang-id">Validasi & Penginputan Data</span><span class="lang-en">Data Validation & Entry</span></div>
+                <div class="skill-tag"><span class="lang-id">Verifikasi & Integritas Data</span><span class="lang-en">Data Verification & Integrity</span></div>
+                <div class="skill-tag"><span class="lang-id">Administrasi Perkantoran</span><span class="lang-en">Office Administration</span></div>
+                <div class="skill-tag"><span class="lang-id">IT Helpdesk Dasar</span><span class="lang-en">Basic IT Helpdesk</span></div>
+                <div class="skill-tag"><span class="lang-id">Mengarsip Dokumen</span><span class="lang-en">Document Archiving</span></div>
                 <div class="skill-tag">PHP & MySQL</div>
-                <div class="skill-tag">Aplikasi Microsoft Office</div>
-                <div class="skill-tag">Microsoft Excel (Mass Data)</div>
-                <div class="skill-tag">Pelayanan Publik</div>
+                <div class="skill-tag"><span class="lang-id">Aplikasi Microsoft Office</span><span class="lang-en">Microsoft Office Suite</span></div>
+                <div class="skill-tag"><span class="lang-id">Microsoft Excel (Mass Data)</span><span class="lang-en">Advanced MS Excel</span></div>
             </div>
         </div>
     </section>
 
     <section id="experience">
-        <h2 class="section-title">Work Experience</h2>
+        <h2 class="section-title"><span class="lang-id">Pengalaman Kerja</span><span class="lang-en">Work Experience</span></h2>
         
         <div class="detailed-row">
             <div class="detailed-image">
                 <img src="kerja-baak.jpg" alt="Dokumentasi Kerja BAAK">
             </div>
             <div class="detailed-text">
-                <h3>Staff Biro Administrasi Akademik dan Kemahasiswaan (BAAK)</h3>
+                <h3><span class="lang-id">Staff Biro Administrasi Akademik dan Kemahasiswaan (BAAK)</span><span class="lang-en">Academic & Student Affairs Administrator</span></h3>
                 <h4>Institut Bisnis dan Teknologi Pelita Indonesia | Des 2023 - Des 2025</h4>
-                <p>Mendukung operasional harian Sistem Informasi Akademik (SIA), termasuk konfigurasi jadwal kuliah dan pembaruan data mahasiswa baru. Pekerjaan ini menuntut tingkat ketelitian yang sangat tinggi dalam mengelola data akademik.</p>
+                <p class="lang-id">Mendukung operasional harian Sistem Informasi Akademik (SIA), termasuk konfigurasi jadwal kuliah dan pembaruan data mahasiswa baru. Pekerjaan ini menuntut tingkat ketelitian yang sangat tinggi dalam mengelola data akademik.</p>
+                <p class="lang-en">Supported the daily operations of the Academic Information System, including scheduling configurations and student data updates. This role required meticulous attention to detail in managing mass academic data.</p>
                 <ul>
-                    <li>Melakukan verifikasi audit ketelitian berkas digital pendaftaran Sempro/Skripsi serta pembaruan status sistem.</li>
-                    <li>Mengelola proses finalisasi dokumen ijazah dan transkrip nilai untuk 2 periode wisuda secara akurat.</li>
-                    <li>Menerbitkan dokumen akademik resmi berdasarkan verifikasi pembayaran keuangan mahasiswa di sistem.</li>
-                    <li>Memberikan dukungan teknis dasar seperti instalasi periferal kantor (printer/scanner) dan pengecekan koneksi jaringan lokal (LAN).</li>
+                    <li class="lang-id">Melakukan verifikasi audit ketelitian berkas digital pendaftaran Sempro/Skripsi serta pembaruan status sistem.</li>
+                    <li class="lang-en">Conducted rigorous data verification and auditing for digital student thesis registrations and system status updates.</li>
+                    
+                    <li class="lang-id">Mengelola proses finalisasi dokumen ijazah dan transkrip nilai untuk 2 periode wisuda secara akurat.</li>
+                    <li class="lang-en">Managed the finalization process for graduation documents and academic transcripts across two graduation periods accurately.</li>
+                    
+                    <li class="lang-id">Menerbitkan dokumen akademik resmi berdasarkan verifikasi pembayaran keuangan mahasiswa di sistem.</li>
+                    <li class="lang-en">Issued official academic documents based on cross-referenced financial payment verifications within the system.</li>
+                    
+                    <li class="lang-id">Memberikan dukungan teknis dasar seperti instalasi periferal kantor (printer/scanner) dan pengecekan koneksi jaringan lokal (LAN).</li>
+                    <li class="lang-en">Provided basic technical support, including office peripheral installations (printers/scanners) and local area network (LAN) troubleshooting.</li>
                 </ul>
-                <a href="#surat-kerja" class="btn-outline" style="margin-top: 15px; font-size: 0.85rem; padding: 8px 20px;"><i class="fas fa-file-alt"></i> Lihat Surat Keterangan Kerja</a>
+                <a href="#surat-kerja" class="btn-outline" style="margin-top: 15px; font-size: 0.85rem; padding: 8px 20px;"><i class="fas fa-file-alt"></i> <span class="lang-id">Lihat Surat Keterangan Kerja</span><span class="lang-en">View Employment Letter</span></a>
             </div>
         </div>
 
@@ -97,12 +133,16 @@
                 <img src="kerja-kantin.jpg" alt="Kasir Kantin Kampus">
             </div>
             <div class="detailed-text">
-                <h3>Kasir & Staf Pengelola Stok</h3>
-                <h4>Kantin Kampus | Feb 2022 - Apr 2023</h4>
-                <p>Bertanggung jawab penuh atas kelancaran transaksi harian dan manajemen ketersediaan barang secara akurat.</p>
+                <h3><span class="lang-id">Kasir & Staf Pengelola Stok</span><span class="lang-en">Cashier & Inventory Staff</span></h3>
+                <h4><span class="lang-id">Kantin Kampus</span><span class="lang-en">Campus Cafeteria</span> | Feb 2022 - Apr 2023</h4>
+                <p class="lang-id">Bertanggung jawab penuh atas kelancaran transaksi harian dan manajemen ketersediaan barang secara akurat.</p>
+                <p class="lang-en">Fully responsible for smooth daily transactions and accurate inventory management.</p>
                 <ul>
-                    <li>Mengoperasikan sistem kasir (POS) menggunakan scanner barcode untuk efisiensi waktu pelayanan.</li>
-                    <li>Mengelola manajemen stok barang masuk/keluar pada sistem inventaris dasar dan memastikan akurasi laporan kas harian.</li>
+                    <li class="lang-id">Mengoperasikan sistem kasir (POS) menggunakan scanner barcode untuk efisiensi waktu pelayanan.</li>
+                    <li class="lang-en">Operated point-of-sale (POS) systems using barcode scanners for efficient service delivery.</li>
+                    
+                    <li class="lang-id">Mengelola manajemen stok barang masuk/keluar pada sistem inventaris dasar dan memastikan akurasi laporan kas harian.</li>
+                    <li class="lang-en">Managed inbound/outbound stock tracking on basic inventory systems, ensuring the accuracy of daily cash reports.</li>
                 </ul>
             </div>
         </div>
@@ -116,10 +156,14 @@
                 <img src="proyek-sekolah.png" alt="Screenshot Aplikasi Administrasi SMKN 2">
             </div>
             <div class="detailed-text">
-                <h3>Aplikasi Administrasi Sekolah SMKN 2 Bengkalis</h3>
-                <h4>Berbasis WEB | Jan 2025 - Apr 2025</h4>
-                <p>Merancang dan membangun sistem digital administrasi sekolah untuk mendigitalisasi proses pendataan siswa yang sebelumnya manual menjadi terpusat pada satu basis data.</p>
-                <p>Proyek ini mencakup analisis kebutuhan sistem sekolah, perancangan database relasional, hingga peluncuran aplikasi yang dapat menghasilkan laporan akademik secara instan.</p>
+                <h3><span class="lang-id">Aplikasi Administrasi Sekolah SMKN 2 Bengkalis</span><span class="lang-en">Web-Based School Administration System (SMKN 2 Bengkalis)</span></h3>
+                <h4><span class="lang-id">Berbasis WEB</span><span class="lang-en">Web-Based</span> | Jan 2025 - Apr 2025</h4>
+                <p class="lang-id">Merancang dan membangun sistem digital administrasi sekolah untuk mendigitalisasi proses pendataan siswa yang sebelumnya manual menjadi terpusat pada satu basis data.</p>
+                <p class="lang-en">Designed and developed a digital school administration system to transition manual student data processes into a centralized, efficient database.</p>
+                
+                <p class="lang-id">Proyek ini mencakup analisis kebutuhan sistem sekolah, perancangan database relasional, hingga peluncuran aplikasi yang dapat menghasilkan laporan akademik secara instan.</p>
+                <p class="lang-en">The project encompassed system requirements analysis, relational database design, and the deployment of an application capable of generating instant academic reports.</p>
+                
                 <p><strong>Role:</strong> Full-Stack Developer, System Analyst.</p>
                 <p><strong>Skills:</strong> Web Development, PHP, MySQL, Database Design.</p>
             </div>
@@ -127,16 +171,17 @@
     </section>
 
     <section id="certificate">
-        <h2 class="section-title">Certificates & Documents</h2>
+        <h2 class="section-title"><span class="lang-id">Sertifikat & Dokumen</span><span class="lang-en">Certificates & Documents</span></h2>
         
         <div class="detailed-row">
             <div class="detailed-image">
                 <img src="sertifikat-bnsp.jpg" alt="Sertifikat BNSP Software Engineer">
             </div>
             <div class="detailed-text">
-                <h3>Sertifikat Kompetensi Kerja (BNSP)</h3>
-                <h4>Software Engineer | Juni 2024 - Juni 2027</h4>
-                <p>Sertifikasi kompetensi resmi berskala nasional dari Badan Nasional Sertifikasi Profesi (BNSP) yang memvalidasi kualifikasi dalam bidang <em>Software Development Expertise</em>.</p>
+                <h3><span class="lang-id">Sertifikat Kompetensi Kerja (BNSP)</span><span class="lang-en">Certificate of Competence (BNSP)</span></h3>
+                <h4>Software Engineer | <span class="lang-id">Juni</span><span class="lang-en">June</span> 2024 - <span class="lang-id">Juni</span><span class="lang-en">June</span> 2027</h4>
+                <p class="lang-id">Sertifikasi kompetensi resmi berskala nasional dari Badan Nasional Sertifikasi Profesi (BNSP) yang memvalidasi kualifikasi dalam bidang <em>Software Development Expertise</em>.</p>
+                <p class="lang-en">National official certification from the National Professional Certification Board (BNSP) validating foundational expertise in Software Development processes.</p>
             </div>
         </div>
 
@@ -145,9 +190,10 @@
                 <img src="sertifikat-senatika.jpg" alt="Sertifikat SENATIKA Pemakalah Terbaik">
             </div>
             <div class="detailed-text">
-                <h3>Pemakalah Terbaik - SENATIKA 5</h3>
-                <h4>Seminar Nasional Informatika 5 | Oktober 2025</h4>
-                <p>Penghargaan sebagai Pemakalah Terbaik pada kegiatan Seminar Nasional Informatika dengan tema "Era Quantum - Metamorfosis AI Indonesia" yang diselenggarakan oleh IBT Pelita Indonesia.</p>
+                <h3><span class="lang-id">Pemakalah Terbaik</span><span class="lang-en">Best Presenter Award</span> - SENATIKA 5</h3>
+                <h4><span class="lang-id">Seminar Nasional Informatika 5</span><span class="lang-en">National Informatics Seminar 5</span> | <span class="lang-id">Oktober</span><span class="lang-en">October</span> 2025</h4>
+                <p class="lang-id">Penghargaan sebagai Pemakalah Terbaik pada kegiatan Seminar Nasional Informatika dengan tema "Era Quantum - Metamorfosis AI Indonesia" yang diselenggarakan oleh IBT Pelita Indonesia.</p>
+                <p class="lang-en">Awarded Best Presenter at the National Informatics Seminar themed "Quantum Era - Indonesia's AI Metamorphosis," hosted by IBT Pelita Indonesia.</p>
             </div>
         </div>
 
@@ -156,15 +202,16 @@
                 <img src="surat-pengalaman-kerja.jpg" alt="Surat Pengalaman Kerja BAAK">
             </div>
             <div class="detailed-text">
-                <h3>Surat Keterangan Pengalaman Kerja (Paklaring)</h3>
-                <h4>Staff BAAK IBT Pelita Indonesia</h4>
-                <p>Dokumen resmi yang memvalidasi pengalaman kerja profesional selama 2 tahun (Desember 2023 - Desember 2025) dengan predikat kinerja yang baik dan kemampuan bekerja sama dalam tim.</p>
+                <h3><span class="lang-id">Surat Keterangan Pengalaman Kerja (Paklaring)</span><span class="lang-en">Employment Certificate (Paklaring)</span></h3>
+                <h4><span class="lang-id">Staff BAAK IBT Pelita Indonesia</span><span class="lang-en">Academic Administrator at IBT Pelita Indonesia</span></h4>
+                <p class="lang-id">Dokumen resmi yang memvalidasi pengalaman kerja profesional selama 2 tahun (Desember 2023 - Desember 2025) dengan predikat kinerja yang baik dan kemampuan bekerja sama dalam tim.</p>
+                <p class="lang-en">Official document validating 2 years of professional work experience (December 2023 - December 2025), acknowledging excellent performance and teamwork capabilities.</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <h2 class="section-title">Contact Me</h2>
+        <h2 class="section-title"><span class="lang-id">Hubungi Saya</span><span class="lang-en">Contact Me</span></h2>
         <div class="contact-container">
             <p style="font-size: 1.2rem; color: #cfd8dc; max-width: 600px; margin: 0 auto;">Pekanbaru, Indonesia</p>
             
@@ -186,5 +233,25 @@
         <p>&copy; 2026 MHD. Elvisrafi Syawal. Built for GitHub Pages.</p>
     </footer>
 
+    <script>
+        let isEnglish = false;
+        function toggleLanguage() {
+            let elementsIndo = document.querySelectorAll('.lang-id');
+            let elementsEnglish = document.querySelectorAll('.lang-en');
+            let btn = document.getElementById('btnLanguage');
+
+            isEnglish = !isEnglish;
+
+            if (isEnglish) {
+                elementsIndo.forEach(el => el.style.display = 'none');
+                elementsEnglish.forEach(el => el.style.display = 'inline-block');
+                btn.innerHTML = 'Indonesia 🇮🇩';
+            } else {
+                elementsIndo.forEach(el => el.style.display = 'inline-block');
+                elementsEnglish.forEach(el => el.style.display = 'none');
+                btn.innerHTML = 'English 🇬🇧';
+            }
+        }
+    </script>
 </body>
 </html>
